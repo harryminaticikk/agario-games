@@ -1,8 +1,8 @@
 **Selamlar.** Kendi kurallarınızı koyabileceğiniz bir yeme yarışmasına var mısınız? Kendi oyununuzu oluşturun!
 Altyapı bana ait değildir, tarafımca düzenlenmiştir.
 
-[Demo](https://agario-games.glitch.me/)
-[Glitch - Altyapı](https://agario-games.glitch.me) | [Github - Altyapı](https://github.com/harryminaticikk/agario-games)
+[Demo Sürümü](https://agario-games.glitch.me/) -
+[Glitch - Altyapı](https://agario-games.glitch.me) 
 
 
 ARAYÜZÜ
