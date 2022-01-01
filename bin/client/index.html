@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/d8dca3c5-0bca-4b11-8f01-44cc3766a5c1%2Ffavicon.png?1558624654608">
+    <!-- Meta Properties -->
+    <meta charset="UTF-8">
+    <title>Open Agar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Audio -->
+    <audio id="split_cell" src="audio/split.mp3"></audio>
+    <audio id="spawn_cell" src="audio/spawn.mp3"></audio>
+    <script>if(location.protocol!='https:'){document.location.replace('https:'+window.location.href.substring(window.location.protocol.length));}</script>
+</head>
+<body>
+    <div id="gameAreaWrapper">
+        <div id="status"><span class="title">Liderlik Tablosu</span></div>
+        <div class="chatbox" id="chatbox">
+            <ul id="chatList" class="chat-list"></ul>
+            <input id="chatInput" type="text" class="chat-input" placeholder="Diğerleriyle sohbet et!" maxlength="35" />
+        </div>
+        <div id="mobile">
+           <input type="image" id="split" class="split" src="img/split.png" alt="splitBtn">
+           <input type="image" id="feed" class="feed" src="img/feed.png" alt="feedBtn">
+        </div>
+        <canvas tabindex="1" id="cvs"></canvas>
+    </div>
+    <div id="startMenuWrapper">
+        <div id="startMenu">
+            <p>Open Agar</p>
+            <input type="text" tabindex="0" autofocus placeholder="Bir kullanıcı adı belirle!" id="playerNameInput" maxlength="25" />
+            <b class="input-error">Kullanıcı adı yalnızca alfanümerik karakterlerden oluşmalıdır!</b>
+            <br />
+            <a onclick="document.getElementById('spawn_cell').play();"><button id="startButton">OYNA</button></a>
+            <button id="spectateButton">IZLE</button>
+            <button id="settingsButton">AYARLAR</button>
+            <br />
+            <div id="settings">
+                 <h3>Ayarlar</h3>
+                <ul>
+                    <label><input id="visBord" type="checkbox">Sınırı göster</label>
+                    <label><input id="showMass" type="checkbox">Kütleyi göster</label>
+                    <br />
+                    <label><input id="continuity" type="checkbox">Fare ekran dışındayken hareket etmeye devam edin</label>
+                    <br />
+                    <label><input id="roundFood" type="checkbox">Yuvarlak yemek</label>
+                    <label><input id="darkMode" type="checkbox">Karanlık Modu Aç/Kapat</label>
+                </ul>
+            </div>
+            <div id="instructions">
+                 <h3>Oyun</h3>
+                <ul>
+                    <li>Karakterinizi hareket ettirmek için farenizi ekranda hareket ettirin.</li>
+                    <li>Karakterinizi büyütmek için yemek ve diğer oyuncuları yiyin (bir oyuncu onu her yediğinde yemek yeniden doğar).</li>
+                    <li>Bir oyuncunun kütlesi, yenen yiyecek parçacıklarının sayısıdır.</li>
+                    <li>Amaç: Şişmanlamaya ve diğer oyuncuları yemeye çalışın.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
